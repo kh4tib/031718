@@ -94,9 +94,70 @@ body {
 
 .main-title {
     position: absolute;
-    left: 30rem;
     align-self: center;
-    font-size: 5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
     color: #fff;
+    opacity: 1;
+    display: flex;
+    div {
+        width: auto;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        margin: 3rem;
 
+            div {
+                left: -1rem;
+                position: relative;
+                opacity: 0;
+                animation: main-title 1s 6s ease-in-out forwards;
+            }
+    }
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    align-self: center;
+    bottom: 24rem;
+    opacity: 0;
+    animation: slide 1s 6s ease-in-out forwards;
+
+    .seperator {
+        width: 8rem;
+        height: 2px;
+        background: #fff;
+    }
+
+    .number {
+        font-size: 1rem;
+        margin-left: 2rem;
+        color: #fff;
+    }
+}
+
+@keyframes main-title {
+    0% {
+        opacity: 0;
+        left: -5rem;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        right: 20rem;;
+    }
+
+    100% {
+        opacity: 1;
+        right: 35rem;
+    }
 }
